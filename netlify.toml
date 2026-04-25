@@ -4,13 +4,9 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  NPM_VERSION = "10"
 
-[[plugins]]
-  package = "@netlify/plugin-react-router"
-
-[context.production]
-  command = "npm run build"
-
-[context.deploy-preview]
-  command = "npm run build"
+# Handle client-side routing - important for React Router if you use it
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
