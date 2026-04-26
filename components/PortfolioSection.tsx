@@ -45,13 +45,13 @@ const PortfolioSection: React.FC = () => {
   return (
     <section id="portfolio" className="lg:min-h-screen flex flex-col justify-center py-10 lg:py-24 max-w-2xl mx-auto overflow-hidden">
       {/* Badge */}
-      <div data-gsap-animate="fade-right" className="flex items-center gap-2 border border-[#333] rounded-full px-4 py-1.5 w-fit mb-6 lg:mb-10">
-        <Grid size={12} className="text-[#999]" />
-        <span className="text-[9px] uppercase tracking-[2px] font-medium text-white">Portfolio</span>
+      <div data-gsap-animate="fade-right" className="flex items-center gap-2 border border-black/10 dark:border-[#333] rounded-full px-4 py-1.5 w-fit mb-6 lg:mb-10 bg-white dark:bg-transparent shadow-sm dark:shadow-none">
+        <Grid size={12} className="text-gray-400 dark:text-[#999]" />
+        <span className="text-[9px] uppercase tracking-[2px] font-medium text-[#1a1a1a] dark:text-white">Portfolio</span>
       </div>
 
       {/* Heading */}
-      <h2 data-gsap-animate="fade-up" className="text-3xl md:text-4xl font-normal leading-tight mb-8 lg:mb-14 tracking-tight">
+      <h2 data-gsap-animate="fade-up" className="text-3xl md:text-4xl font-normal leading-tight mb-8 lg:mb-14 tracking-tight text-[#1a1a1a] dark:text-white">
         Featured <span className="text-primary">Projects</span>
       </h2>
 
@@ -60,7 +60,7 @@ const PortfolioSection: React.FC = () => {
         {projects.map((project) => (
           <div key={project.id} className="group cursor-pointer">
             <div 
-              className={`relative overflow-hidden rounded-[25px] transition-all duration-500 mb-4 lg:mb-5 bg-[#222] ${
+              className={`relative overflow-hidden rounded-[25px] transition-all duration-500 mb-4 lg:mb-5 bg-gray-100 dark:bg-[#222] border border-black/5 dark:border-none ${
                 project.size === 'large' ? 'aspect-[16/9]' : 'aspect-square'
               }`}
             >
@@ -84,7 +84,7 @@ const PortfolioSection: React.FC = () => {
             </div>
             
             {/* Project Title */}
-            <h3 className="text-lg lg:text-2xl font-light text-white group-hover:text-primary transition-colors duration-300">
+            <h3 className="text-lg lg:text-2xl font-light text-[#1a1a1a] dark:text-white group-hover:text-primary transition-colors duration-300">
               {project.title}
             </h3>
           </div>

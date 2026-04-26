@@ -12,6 +12,7 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import BackgroundController from './components/BackgroundController';
 import Preloader from './components/Preloader';
+import ThemeToggle from './components/ThemeToggle';
 import { NAV_ITEMS, PERSONAL_INFO } from './constants';
 import { X, Menu as MenuIcon, Instagram, Twitter, Facebook, Linkedin } from 'lucide-react';
 
@@ -44,7 +45,27 @@ const App: React.FC = () => {
   const [isConfigOpen, setIsConfigOpen] = useState(false);
   const [primaryColor, setPrimaryColor] = useState('#28e98c');
   const [bgType, setBgType] = useState('Earth Lines Sphere');
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    if (typeof window !== 'undefined') {
+      return (localStorage.getItem('theme') as 'dark' | 'light') || 'dark';
+    }
+    return 'dark';
+  });
   const mainRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    // Sync theme with document class
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  };
 
   useEffect(() => {
     // Update CSS Variable for primary color
@@ -168,24 +189,25 @@ const App: React.FC = () => {
   return (
     <>
       {loading && <Preloader onComplete={() => setLoading(false)} />}
-      <div className={`min-h-screen bg-[#000] text-white relative flex flex-col lg:flex-row overflow-x-hidden selection:bg-[var(--primary)] selection:text-black transition-opacity duration-1000 ${loading ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`min-h-screen bg-[#f5f5f5] dark:bg-[#000] text-[#1a1a1a] dark:text-white relative flex flex-col lg:flex-row overflow-x-hidden selection:bg-[var(--primary)] selection:text-black transition-opacity duration-1000 ${loading ? 'opacity-0' : 'opacity-100'}`}>
         {/* Dynamic Animated Background Controller */}
         <BackgroundController type={bgType} primaryColor={primaryColor} />
 
         {/* Mobile Header */}
+        {/* Mobile Header - Logo and Controls */}
         <div className="lg:hidden fixed top-0 left-0 w-full p-6 flex justify-between items-center z-[70] pointer-events-none">
-          <div className="flex items-center gap-1 pointer-events-auto bg-black/80 backdrop-blur-md px-4 py-2 rounded-full border border-[#333]">
-            <span className="text-xl font-bold tracking-tight">{PERSONAL_INFO.name}</span>
-            <div className="w-3 h-3 rounded-full border border-primary flex items-center justify-center">
-              <span className="text-[6px] text-primary font-bold">p</span>
-            </div>
+          <div className="pointer-events-auto bg-white/80 dark:bg-black/80 backdrop-blur-md px-4 py-2 rounded-full border border-black/10 dark:border-[#333] shadow-lg">
+            <span className="text-lg font-bold tracking-tight text-[#1a1a1a] dark:text-white">{PERSONAL_INFO.name}</span>
           </div>
-          <button 
-            onClick={() => setIsMenuOpen(true)}
-            className="w-12 h-12 bg-[#333] hover:bg-[#444] border border-[#444] rounded-full flex items-center justify-center text-white pointer-events-auto transition-all active:scale-90"
-          >
-            <MenuIcon size={20} />
-          </button>
+          <div className="flex items-center gap-3 pointer-events-auto">
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+            <button 
+              onClick={() => setIsMenuOpen(true)}
+              className="w-12 h-12 bg-white dark:bg-[#333] hover:bg-gray-100 dark:hover:bg-[#444] border border-black/10 dark:border-[#444] rounded-full flex items-center justify-center text-black dark:text-white transition-all active:scale-90 shadow-lg"
+            >
+              <MenuIcon size={20} />
+            </button>
+          </div>
         </div>
 
       <SidebarLeft onConfigClick={() => setIsConfigOpen(true)} />
@@ -220,7 +242,7 @@ const App: React.FC = () => {
         </div>
       </main>
 
-      <SidebarRight onMenuToggle={() => setIsMenuOpen(true)} />
+      <SidebarRight onMenuToggle={() => setIsMenuOpen(true)} theme={theme} toggleTheme={toggleTheme} />
 
       {/* Configuration Modal */}
       <div 
@@ -228,12 +250,12 @@ const App: React.FC = () => {
       >
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setIsConfigOpen(false)}></div>
         <div 
-          className={`absolute top-0 right-0 h-full w-full max-w-xl bg-[#191919] shadow-2xl transform transition-transform duration-500 flex flex-col ${isConfigOpen ? 'translate-x-0' : 'translate-x-full'}`}
+          className={`absolute top-0 right-0 h-full w-full max-w-xl bg-white dark:bg-[#191919] shadow-2xl transform transition-transform duration-500 flex flex-col ${isConfigOpen ? 'translate-x-0' : 'translate-x-full'}`}
         >
           <div className="p-8 lg:p-12 flex-1 overflow-y-auto">
             <div className="flex justify-between items-center mb-16">
-              <h2 className="text-4xl font-normal text-white">Configuration</h2>
-              <button onClick={() => setIsConfigOpen(false)} className="text-white hover:text-primary">
+              <h2 className="text-4xl font-normal text-[#1a1a1a] dark:text-white">Configuration</h2>
+              <button onClick={() => setIsConfigOpen(false)} className="text-gray-400 dark:text-white hover:text-primary transition-colors">
                 <X size={32} />
               </button>
             </div>
@@ -241,13 +263,13 @@ const App: React.FC = () => {
             <div className="space-y-16">
               {/* Colors */}
               <section>
-                <h3 className="text-[10px] uppercase tracking-[3px] font-bold text-[#666] mb-8">Colors</h3>
+                <h3 className="text-[10px] uppercase tracking-[3px] font-bold text-gray-400 dark:text-[#666] mb-8">Colors</h3>
                 <div className="flex flex-wrap gap-5">
                   {THEME_COLORS.map((color) => (
                     <button
                       key={color.name}
                       onClick={() => setPrimaryColor(color.value)}
-                      className={`w-10 h-10 rounded-full transition-all duration-300 relative ${primaryColor === color.value ? 'scale-125 ring-2 ring-white/50 ring-offset-4 ring-offset-[#191919]' : 'hover:scale-110'}`}
+                      className={`w-10 h-10 rounded-full transition-all duration-300 relative ${primaryColor === color.value ? 'scale-125 ring-2 ring-primary/50 dark:ring-white/50 ring-offset-4 ring-offset-white dark:ring-offset-[#191919]' : 'hover:scale-110'}`}
                       style={{ backgroundColor: color.value }}
                     >
                       {primaryColor === color.value && (
@@ -262,13 +284,13 @@ const App: React.FC = () => {
 
               {/* 3D Shapes / Backgrounds */}
               <section>
-                <h3 className="text-[10px] uppercase tracking-[3px] font-bold text-[#666] mb-8">Three Dimensional Shapes</h3>
+                <h3 className="text-[10px] uppercase tracking-[3px] font-bold text-gray-400 dark:text-[#666] mb-8">Three Dimensional Shapes</h3>
                 <div className="grid grid-cols-2 gap-y-6 gap-x-12">
                   {BACKGROUNDS.map((bg) => (
                     <button
                       key={bg}
                       onClick={() => setBgType(bg)}
-                      className={`text-left text-sm font-bold tracking-tight transition-colors ${bgType === bg ? 'text-primary underline underline-offset-8' : 'text-white hover:text-primary'}`}
+                      className={`text-left text-sm font-bold tracking-tight transition-colors ${bgType === bg ? 'text-primary underline underline-offset-8' : 'text-[#1a1a1a] dark:text-white hover:text-primary'}`}
                     >
                       {bg}
                     </button>
@@ -286,11 +308,11 @@ const App: React.FC = () => {
       >
         <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}></div>
         <div 
-          className={`absolute top-0 right-0 h-full w-full max-w-[340px] bg-[#191919] shadow-2xl transform transition-transform duration-500 p-10 flex flex-col ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+          className={`absolute top-0 right-0 h-full w-full max-w-[340px] bg-white dark:bg-[#191919] shadow-2xl transform transition-transform duration-500 p-10 flex flex-col ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
         >
           <div className="flex justify-between items-center mb-12">
-            <h3 className="text-[#999] text-xs font-medium uppercase tracking-[3px]">Menu</h3>
-            <button onClick={() => setIsMenuOpen(false)} className="text-white hover:text-primary">
+            <h3 className="text-gray-400 dark:text-[#999] text-xs font-medium uppercase tracking-[3px]">Menu</h3>
+            <button onClick={() => setIsMenuOpen(false)} className="text-gray-400 dark:text-white hover:text-primary transition-colors">
               <X size={24} />
             </button>
           </div>
@@ -300,23 +322,23 @@ const App: React.FC = () => {
               <button 
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="flex items-center gap-4 text-lg font-light text-[#666] hover:text-primary transition-colors text-left group"
+                className="flex items-center gap-4 text-lg font-light text-gray-400 dark:text-[#666] hover:text-primary transition-colors text-left group"
               >
                 <span className="group-hover:text-primary">{item.icon}</span>
-                <span className="text-white font-medium group-hover:text-primary transition-colors">{item.label}</span>
+                <span className="text-[#1a1a1a] dark:text-white font-medium group-hover:text-primary transition-colors">{item.label}</span>
               </button>
             ))}
           </nav>
 
-          <div className="mt-auto pt-10 border-t border-[#333]">
-            <p className="text-[#666] text-[10px] uppercase tracking-[3px] mb-6">Social</p>
+          <div className="mt-auto pt-10 border-t border-black/10 dark:border-[#333]">
+            <p className="text-gray-400 dark:text-[#666] text-[10px] uppercase tracking-[3px] mb-6">Social</p>
             <div className="flex gap-4">
-               <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#666] hover:text-primary transition-colors">
+               <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 dark:text-[#666] hover:text-primary transition-colors">
                  <Linkedin size={18} />
                </a>
-               <a href="#" className="text-[#666] hover:text-primary transition-colors"><Instagram size={18} /></a>
-               <a href="#" className="text-[#666] hover:text-primary transition-colors"><Twitter size={18} /></a>
-               <a href="#" className="text-[#666] hover:text-primary transition-colors"><Facebook size={18} /></a>
+               <a href="#" className="text-gray-400 dark:text-[#666] hover:text-primary transition-colors"><Instagram size={18} /></a>
+               <a href="#" className="text-gray-400 dark:text-[#666] hover:text-primary transition-colors"><Twitter size={18} /></a>
+               <a href="#" className="text-gray-400 dark:text-[#666] hover:text-primary transition-colors"><Facebook size={18} /></a>
             </div>
           </div>
         </div>

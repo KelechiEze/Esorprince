@@ -27,13 +27,13 @@ const ServicesSection: React.FC = () => {
   return (
     <section id="services" className="lg:min-h-screen flex flex-col justify-center py-10 lg:py-24 max-w-2xl mx-auto overflow-hidden">
       {/* Services Badge */}
-      <div data-gsap-animate="fade-right" className="flex items-center gap-2 border border-[#333] rounded-full px-4 py-1.5 w-fit mb-6 lg:mb-10">
-        <Layers size={12} className="text-[#999]" />
-        <span className="text-[9px] uppercase tracking-[2px] font-medium text-white">Services</span>
+      <div data-gsap-animate="fade-right" className="flex items-center gap-2 border border-black/10 dark:border-[#333] rounded-full px-4 py-1.5 w-fit mb-6 lg:mb-10 bg-white dark:bg-transparent shadow-sm dark:shadow-none">
+        <Layers size={12} className="text-gray-400 dark:text-[#999]" />
+        <span className="text-[9px] uppercase tracking-[2px] font-medium text-[#1a1a1a] dark:text-white">Services</span>
       </div>
 
       {/* Heading */}
-      <h2 data-gsap-animate="fade-up" className="text-3xl md:text-4xl font-normal leading-tight mb-8 lg:mb-12 tracking-tight">
+      <h2 data-gsap-animate="fade-up" className="text-3xl md:text-4xl font-normal leading-tight mb-8 lg:mb-12 tracking-tight text-[#1a1a1a] dark:text-white">
         My <span className="text-primary">Specializations</span>
       </h2>
 
@@ -42,18 +42,18 @@ const ServicesSection: React.FC = () => {
         {specializations.map((service, idx) => (
           <div 
             key={idx} 
-            className="group relative bg-transparent border border-[#333] hover:border-primary rounded-[25px] p-6 lg:p-8 transition-all duration-300"
+            className="group relative bg-white dark:bg-transparent border border-black/10 dark:border-[#333] hover:border-primary rounded-[25px] p-6 lg:p-8 transition-all duration-300 shadow-sm dark:shadow-none"
           >
             <div className="flex justify-between items-start gap-4">
               <div className="space-y-2 lg:space-y-3">
-                <h3 className="text-xl md:text-2xl font-light group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-xl md:text-2xl font-light text-[#1a1a1a] dark:text-white group-hover:text-primary transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-[#999] text-xs md:text-sm max-w-sm leading-relaxed">
+                <p className="text-gray-500 dark:text-[#999] text-xs md:text-sm max-w-sm leading-relaxed">
                   {service.description}
                 </p>
                 <div className="pt-2 lg:pt-3">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-white border-b border-transparent group-hover:border-primary transition-all duration-300 cursor-pointer">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#1a1a1a] dark:text-white border-b border-transparent group-hover:border-primary transition-all duration-300 cursor-pointer">
                     {service.projectCount} Projects
                   </span>
                 </div>
