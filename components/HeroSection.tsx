@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
         className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.1] mb-6 lg:mb-8 tracking-tight text-[#1a1a1a] dark:text-white"
       >
         Meet <span className="text-primary">{PERSONAL_INFO.name}</span>, <br />
-        Content Creator & Production Assistant
+        Production Assistant & Production Executive
       </h1>
 
       <p 
