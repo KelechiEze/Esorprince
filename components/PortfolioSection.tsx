@@ -14,7 +14,7 @@ const PortfolioSection: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'Well to Fit Digital Community Hub',
+      title: 'Well to Fit ',
       image: '/frot1.jpeg',
       tags: ['Growth Strategy', 'Community Hub', 'Well To Fit'],
       size: 'large',
@@ -22,7 +22,7 @@ const PortfolioSection: React.FC = () => {
     },
     {
       id: 2,
-      title: 'Fit & Raw Organic Campaign',
+      title: 'Graydient',
       image: '/frot2.jpeg',
       tags: ['Growth Marketing', 'Storytelling'],
       size: 'small',
@@ -30,7 +30,7 @@ const PortfolioSection: React.FC = () => {
     },
     {
       id: 3,
-      title: 'Verve Studio Brand Launch',
+      title: 'Medsurge Elective',
       image: '/frot3.jpeg',
       tags: ['Conversion Design', 'UI/UX'],
       size: 'small',
@@ -38,7 +38,7 @@ const PortfolioSection: React.FC = () => {
     },
     {
       id: 4,
-      title: 'Aura Media Funnel Optimization',
+      title: 'RunCheck',
       image: '/frot4.jpeg',
       tags: ['CRO', 'Marketing Analytics'],
       size: 'large',
