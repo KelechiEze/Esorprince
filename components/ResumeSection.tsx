@@ -5,34 +5,28 @@ import { Briefcase } from 'lucide-react';
 const ResumeSection: React.FC = () => {
   const experiences = [
     {
-      period: 'Mar. 2024 - Present',
+      period: '2020 - Present',
       items: [
-        { title: 'Content Creator', company: 'Dangote Cement (Media Team)' },
-        { title: 'Production Assistant / Office Rep', company: 'Eureka Media' },
+        { title: 'Co-Founder & Brand Director', company: 'Well to Fit (Wellness Brand & Community)' },
+        { title: 'Senior Digital Marketing Consultant', company: 'Freelance & Independent Client Projects' },
       ],
     },
     {
-      period: 'Nov. 2024',
+      period: '2017 - 2020',
       items: [
-        { title: 'Production Assistant', company: 'Leadway Assurance' },
+        { title: 'Lead Growth Strategist', company: 'Apex Digital Marketing Agency' },
       ],
     },
     {
-      period: '2023 - 2024',
+      period: '2015 - 2017',
       items: [
-        { title: 'Production Assistant (Content Creator)', company: 'Theboomshow (Football Podcast)' },
+        { title: 'Digital Marketing Specialist', company: 'Wellness Media Group' },
       ],
     },
     {
-      period: '2018 - 2021',
+      period: '2011 - 2015',
       items: [
-        { title: 'Administration Officer', company: 'Angels Montessori Group of Schools' },
-      ],
-    },
-    {
-      period: '2014 - 2017',
-      items: [
-        { title: 'B.Sc. Oil and Gas Engineering', company: 'All Nations University, Ghana' },
+        { title: 'B.S. in Communications & Digital Media', company: 'New York University' },
       ],
     },
   ];

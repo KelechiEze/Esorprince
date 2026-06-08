@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FileText, Camera, ShieldCheck, Users, Clock, Lightbulb, MessageSquare, Monitor } from 'lucide-react';
+import { FileText, Camera, Users, MessageSquare, Monitor, TrendingUp, Globe, Layers, Compass } from 'lucide-react';
 
 interface Skill {
   name: string;
@@ -11,44 +11,44 @@ interface Skill {
 const SkillsSection: React.FC = () => {
   const skills: Skill[] = [
     {
-      name: 'Project Management',
+      name: 'Brand Strategy',
       percentage: 95,
-      icon: <ShieldCheck size={36} />,
+      icon: <Compass size={36} />,
     },
     {
-      name: 'Videography',
+      name: 'Web Design & CRO',
       percentage: 90,
-      icon: <Camera size={36} />,
+      icon: <Monitor size={36} />,
     },
     {
-      name: 'Cinematography',
-      percentage: 88,
-      icon: <Camera size={36} />,
-    },
-    {
-      name: 'Customer Service',
-      percentage: 92,
+      name: 'Social Growth',
+      percentage: 96,
       icon: <Users size={36} />,
     },
     {
-      name: 'Time Management',
-      percentage: 96,
-      icon: <Clock size={36} />,
-    },
-    {
-      name: 'Leadership',
-      percentage: 90,
-      icon: <Lightbulb size={36} />,
-    },
-    {
-      name: 'Communication',
+      name: 'Storytelling',
       percentage: 94,
       icon: <MessageSquare size={36} />,
     },
     {
-      name: 'Microsoft Office',
-      percentage: 98,
-      icon: <Monitor size={36} />,
+      name: 'SEO Strategy',
+      percentage: 88,
+      icon: <Globe size={36} />,
+    },
+    {
+      name: 'Paid Advertising',
+      percentage: 85,
+      icon: <TrendingUp size={36} />,
+    },
+    {
+      name: 'Content Direction',
+      percentage: 92,
+      icon: <Camera size={36} />,
+    },
+    {
+      name: 'Campaign Management',
+      percentage: 93,
+      icon: <Layers size={36} />,
     },
   ];
 

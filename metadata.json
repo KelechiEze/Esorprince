@@ -1,6 +1,8 @@
 {
-  "name": "Esor-Prince Portfolio",
-  "description": "Professional portfolio for Esor-Prince Edogbomanwana Revival - Content Creator, Production Assistant, and Project Management Professional.",
+  "name": "Samuel Johnson Portfolio",
+  "description": "Professional portfolio for Samuel Johnson - Digital Marketing Strategist and co-founder of Well to Fit.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

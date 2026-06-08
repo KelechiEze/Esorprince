@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
         className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.1] mb-6 lg:mb-8 tracking-tight text-[#1a1a1a] dark:text-white"
       >
         Meet <span className="text-primary">{PERSONAL_INFO.name}</span>, <br />
-        Production Assistant & Production Executive
+        Digital Marketing Strategist
       </h1>
 
       <p 
@@ -49,12 +49,12 @@ const HeroSection: React.FC = () => {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-10 sm:gap-0 mt-2">
         <div data-gsap-stagger className="flex gap-10 lg:gap-14">
           <div data-gsap-animate="scale-in">
-            <div className="text-4xl lg:text-5xl font-normal text-primary mb-1 tracking-tighter">7+</div>
-            <div className="text-gray-400 dark:text-[#666] text-[9px] uppercase tracking-[2px] font-medium">Years in <br/> Admin & Media</div>
+            <div className="text-4xl lg:text-5xl font-normal text-primary mb-1 tracking-tighter">10+</div>
+            <div className="text-gray-400 dark:text-[#666] text-[9px] uppercase tracking-[2px] font-medium">Years in <br/> Brand Strategy</div>
           </div>
           <div data-gsap-animate="scale-in" data-gsap-delay="0.1">
-            <div className="text-4xl lg:text-5xl font-normal text-primary mb-1 tracking-tighter">100+</div>
-            <div className="text-gray-400 dark:text-[#666] text-[9px] uppercase tracking-[2px] font-medium">Projects <br/> Assisted</div>
+            <div className="text-4xl lg:text-5xl font-normal text-primary mb-1 tracking-tighter">200K+</div>
+            <div className="text-gray-400 dark:text-[#666] text-[9px] uppercase tracking-[2px] font-medium">Community <br/> Audited & Built</div>
           </div>
         </div>
 

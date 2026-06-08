@@ -17,21 +17,22 @@ const SidebarLeft: React.FC<SidebarLeftProps> = ({ onConfigClick }) => {
           <div className="flex items-center gap-1.5">
              <span className="text-2xl font-bold tracking-tight text-[#1a1a1a] dark:text-white">{PERSONAL_INFO.name}</span>
              <div className="w-5 h-5 rounded-full border border-primary flex items-center justify-center translate-y-0.5">
-               <span className="text-[9px] text-primary font-bold">p</span>
+               <span className="text-[9px] text-primary font-bold">s</span>
              </div>
           </div>
           <div className="text-right pt-0.5">
-            <p className="text-[10px] font-bold leading-tight text-[#1a1a1a] dark:text-white uppercase tracking-wider">Production</p>
-            <p className="text-[10px] font-bold leading-tight text-[#1a1a1a] dark:text-white uppercase tracking-wider">Assistant</p>
+            <p className="text-[10px] font-bold leading-tight text-[#1a1a1a] dark:text-white uppercase tracking-wider">Marketing</p>
+            <p className="text-[10px] font-bold leading-tight text-[#1a1a1a] dark:text-white uppercase tracking-wider">Strategist</p>
           </div>
         </div>
 
         {/* Profile Image */}
         <div className="w-full aspect-[1/1.5] rounded-[40px] overflow-hidden mb-6 lg:mb-8 bg-gray-100 dark:bg-[#222] border border-black/5 dark:border-none">
           <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" 
+            src="https://kelechieze.wordpress.com/wp-content/uploads/2026/06/whatsapp-image-2026-06-08-at-15.47.12.jpeg" 
             alt={PERSONAL_INFO.fullName} 
             className="w-full h-full object-cover grayscale brightness-100 dark:brightness-90 transition-transform duration-500 hover:scale-105"
+            referrerPolicy="no-referrer"
           />
         </div>
 
@@ -50,9 +51,8 @@ const SidebarLeft: React.FC<SidebarLeftProps> = ({ onConfigClick }) => {
         <div className="flex gap-3 mb-6 lg:mb-8">
           {[
             { Icon: Linkedin, href: PERSONAL_INFO.linkedin },
-            { Icon: Instagram, href: "#" },
-            { Icon: Twitter, href: "#" },
-            { Icon: Facebook, href: "#" }
+            { Icon: Instagram, href: (PERSONAL_INFO as any).instagram },
+            { Icon: Facebook, href: (PERSONAL_INFO as any).facebook }
           ].map((item, idx) => (
             <a 
               key={idx}

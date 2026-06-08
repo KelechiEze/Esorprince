@@ -1,25 +1,25 @@
 
 import React from 'react';
-import { Layers, Camera, Video, Briefcase } from 'lucide-react';
+import { Layers, Globe, TrendingUp, Briefcase } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
   const specializations = [
     {
-      title: 'Content Creation',
-      description: 'Producing high-quality photos, videos, and infographics aligned with modern brand values.',
-      projectCount: 45,
-      icon: <Camera size={20} className="text-primary" />,
+      title: 'Digital Marketing Strategy',
+      description: 'Developing data-driven, multi-platform growth roadmaps to scale audience reach, brand awareness, and user engagement.',
+      projectCount: 54,
+      icon: <TrendingUp size={20} className="text-primary" />,
     },
     {
-      title: 'Production Assistance',
-      description: 'Managing logistics for shoots, booking locations, coordinating talent, and setting up equipment.',
-      projectCount: 32,
-      icon: <Video size={20} className="text-primary" />,
+      title: 'Conversion-Focused Websites',
+      description: 'Designing and building fast, visually polished, and high-converting websites optimized for both aesthetics and results.',
+      projectCount: 42,
+      icon: <Globe size={20} className="text-primary" />,
     },
     {
-      title: 'Office Administration',
-      description: 'Streamlining administrative processes, managing office operations, and supporting executive staff.',
-      projectCount: 15,
+      title: 'Brand Storytelling & Content',
+      description: 'Crafting content guidelines, narrative strategies, and social media campaigns built for sustainable community growth.',
+      projectCount: 88,
       icon: <Briefcase size={20} className="text-primary" />,
     },
   ];

@@ -14,14 +14,16 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const PERSONAL_INFO = {
-  name: 'Esor-Prince',
-  fullName: 'Esor-Prince Edogbomanwana Revival',
-  title: 'Content Creator & Production Assistant',
-  location: 'Ikeja, Lagos State',
-  email: 'revivalprince@yahoo.com',
-  phone: '+(234) 7032862848',
-  linkedin: 'https://www.linkedin.com/in/esor-prince-revival-40256b177',
-  summary: 'Detail-oriented and highly organized individual skilled managing office operations and supporting executive staff. Proficient in coordinating schedules, handling communications, and streamlining administrative processes to enhance efficiency in a fast paced company. With a certification in project management, I’m now seeking opportunities to contribute optimally to company\'s growth.',
+  name: 'Samuel',
+  fullName: 'Samuel Johnson',
+  title: 'Digital Marketing Strategist & Brand Builder',
+  location: 'Remote / London, UK',
+  email: 'mailsamueljohnson@gmail.com',
+  phone: '+44 (770) 123-4567',
+  linkedin: 'https://www.linkedin.com/in/samuel-johnson-1a48b9128/',
+  instagram: 'https://www.instagram.com/meetsamueljohnson?igsh=azFneTJ6NXI3cmY1&utm_source=qr',
+  facebook: 'https://www.facebook.com/samuelstiko?mibextid=wwXIfr&mibextid=wwXIfr',
+  summary: 'Digital Marketing Strategist with nearly a decade of experience helping brands grow, build communities, and drive meaningful engagement online. Co-founder of Well to Fit, a multi-platform health and wellness brand with a community of 200,000+ built through strategic content, consistent storytelling, and audience-first thinking across social media.',
 };
 
 export const COLORS = {

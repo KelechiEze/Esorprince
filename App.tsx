@@ -336,9 +336,12 @@ const App: React.FC = () => {
                <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 dark:text-[#666] hover:text-primary transition-colors">
                  <Linkedin size={18} />
                </a>
-               <a href="#" className="text-gray-400 dark:text-[#666] hover:text-primary transition-colors"><Instagram size={18} /></a>
-               <a href="#" className="text-gray-400 dark:text-[#666] hover:text-primary transition-colors"><Twitter size={18} /></a>
-               <a href="#" className="text-gray-400 dark:text-[#666] hover:text-primary transition-colors"><Facebook size={18} /></a>
+               <a href={(PERSONAL_INFO as any).instagram} target="_blank" rel="noopener noreferrer" className="text-gray-400 dark:text-[#666] hover:text-primary transition-colors">
+                 <Instagram size={18} />
+               </a>
+               <a href={(PERSONAL_INFO as any).facebook} target="_blank" rel="noopener noreferrer" className="text-gray-400 dark:text-[#666] hover:text-primary transition-colors">
+                 <Facebook size={18} />
+               </a>
             </div>
           </div>
         </div>
