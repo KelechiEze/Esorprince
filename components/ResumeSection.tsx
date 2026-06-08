@@ -5,28 +5,21 @@ import { Briefcase } from 'lucide-react';
 const ResumeSection: React.FC = () => {
   const experiences = [
     {
-      period: '2020 - Present',
+      period: '2024 - present',
       items: [
-        { title: 'Co-Founder & Brand Director', company: 'Well to Fit (Wellness Brand & Community)' },
-        { title: 'Senior Digital Marketing Consultant', company: 'Freelance & Independent Client Projects' },
+        { title: 'Co founder & Brand Director', company: 'Well to Fit' },
       ],
     },
     {
-      period: '2017 - 2020',
+      period: '2023 - 2026',
       items: [
-        { title: 'Lead Growth Strategist', company: 'Apex Digital Marketing Agency' },
+        { title: 'Digital Marketing Lead', company: '3D Impact Marketing Limited' },
       ],
     },
     {
-      period: '2015 - 2017',
+      period: '2020 - 2023',
       items: [
-        { title: 'Digital Marketing Specialist', company: 'Wellness Media Group' },
-      ],
-    },
-    {
-      period: '2011 - 2015',
-      items: [
-        { title: 'B.S. in Communications & Digital Media', company: 'New York University' },
+        { title: 'Business Administration', company: 'Babcock University' },
       ],
     },
   ];

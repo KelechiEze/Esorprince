@@ -52,11 +52,6 @@ const ServicesSection: React.FC = () => {
                 <p className="text-gray-500 dark:text-[#999] text-xs max-w-sm leading-relaxed">
                   {service.description}
                 </p>
-                <div className="pt-2 lg:pt-3">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#1a1a1a] dark:text-white border-b border-transparent group-hover:border-primary transition-all duration-300 cursor-pointer">
-                    {service.projectCount} Projects
-                  </span>
-                </div>
               </div>
               
               <div className="hidden sm:block">

@@ -16,7 +16,7 @@ const SkillsSection: React.FC = () => {
       icon: <Compass size={36} />,
     },
     {
-      name: 'Web Design & CRO',
+      name: 'Web design',
       percentage: 90,
       icon: <Monitor size={36} />,
     },
@@ -62,7 +62,7 @@ const SkillsSection: React.FC = () => {
 
       {/* Heading */}
       <h2 data-gsap-animate="fade-up" className="text-2xl md:text-3xl font-normal leading-tight mb-6 lg:mb-10 tracking-tight text-[#1a1a1a] dark:text-white">
-        My <span className="text-primary">Advantages</span>
+        My <span className="text-primary">skillset</span>
       </h2>
 
       {/* Grid of skill items */}

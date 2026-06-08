@@ -27,11 +27,11 @@ const SidebarLeft: React.FC<SidebarLeftProps> = ({ onConfigClick }) => {
         </div>
 
         {/* Profile Image */}
-        <div className="w-full aspect-[1/1.5] rounded-[40px] overflow-hidden mb-6 lg:mb-8 bg-gray-100 dark:bg-[#222] border border-black/5 dark:border-none p-4 py-8 flex items-center justify-center">
+        <div className="w-full aspect-[1/1.5] max-h-[320px] lg:max-h-[360px] rounded-[40px] overflow-hidden mb-6 lg:mb-8 bg-gray-100 dark:bg-[#222] border border-black/5 dark:border-none p-4 py-10 flex items-center justify-center">
           <img 
             src="https://kelechieze.wordpress.com/wp-content/uploads/2026/06/whatsapp-image-2026-06-08-at-15.47.12.jpeg" 
             alt={PERSONAL_INFO.fullName} 
-            className="w-full h-full object-contain grayscale brightness-100 dark:brightness-90 transition-transform duration-500 hover:scale-105"
+            className="w-full h-full object-contain brightness-100 dark:brightness-90 transition-transform duration-500 hover:scale-105"
             referrerPolicy="no-referrer"
           />
         </div>

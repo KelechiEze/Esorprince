@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Grid } from 'lucide-react';
 
@@ -8,6 +7,7 @@ interface Project {
   image: string;
   tags: string[];
   size: 'large' | 'small';
+  url: string;
 }
 
 const PortfolioSection: React.FC = () => {
@@ -15,32 +15,42 @@ const PortfolioSection: React.FC = () => {
     {
       id: 1,
       title: 'Well to Fit Digital Community Hub',
-      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2069&auto=format&fit=crop',
+      image: '/frot1.jpeg',
       tags: ['Growth Strategy', 'Community Hub', 'Well To Fit'],
       size: 'large',
+      url: 'https://welltofit.com/',
     },
     {
       id: 2,
       title: 'Fit & Raw Organic Campaign',
-      image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=2070&auto=format&fit=crop',
+      image: '/frot2.jpeg',
       tags: ['Growth Marketing', 'Storytelling'],
       size: 'small',
+      url: 'https://greydient.co/',
     },
     {
       id: 3,
       title: 'Verve Studio Brand Launch',
-      image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop',
+      image: '/frot3.jpeg',
       tags: ['Conversion Design', 'UI/UX'],
       size: 'small',
+      url: 'https://www.medsurgelective.co.uk/',
     },
     {
       id: 4,
       title: 'Aura Media Funnel Optimization',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop',
+      image: '/frot4.jpeg',
       tags: ['CRO', 'Marketing Analytics'],
       size: 'large',
+      url: 'https://runcheck.online/',
     },
   ];
+
+  const handleProjectClick = (url: string) => {
+    window.open(url, '_blank'); // Opens in new tab
+    // OR use this to open in the same tab:
+    // window.location.href = url;
+  };
 
   return (
     <section id="portfolio" className="lg:min-h-screen flex flex-col justify-center py-10 lg:py-24 max-w-2xl mx-auto overflow-hidden">
@@ -58,7 +68,11 @@ const PortfolioSection: React.FC = () => {
       {/* Projects Grid */}
       <div data-gsap-stagger className="space-y-8 lg:space-y-10">
         {projects.map((project) => (
-          <div key={project.id} className="group cursor-pointer">
+          <div 
+            key={project.id} 
+            className="group cursor-pointer"
+            onClick={() => handleProjectClick(project.url)}
+          >
             <div 
               className={`relative overflow-hidden rounded-[25px] transition-all duration-500 mb-4 lg:mb-5 bg-gray-100 dark:bg-[#222] border border-black/5 dark:border-none ${
                 project.size === 'large' ? 'aspect-[16/9]' : 'aspect-square'
