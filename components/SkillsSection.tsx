@@ -61,7 +61,7 @@ const SkillsSection: React.FC = () => {
       </div>
 
       {/* Heading */}
-      <h2 data-gsap-animate="fade-up" className="text-3xl md:text-4xl font-normal leading-tight mb-8 lg:mb-14 tracking-tight text-[#1a1a1a] dark:text-white">
+      <h2 data-gsap-animate="fade-up" className="text-2xl md:text-3xl font-normal leading-tight mb-6 lg:mb-10 tracking-tight text-[#1a1a1a] dark:text-white">
         My <span className="text-primary">Advantages</span>
       </h2>
 
@@ -73,11 +73,11 @@ const SkillsSection: React.FC = () => {
               <div className="flex items-center justify-center transition-transform duration-300 group-hover:scale-110 text-[#1a1a1a] dark:text-white">
                 {React.cloneElement(skill.icon as any, { className: 'text-current' })}
               </div>
-              <div className="text-2xl md:text-3xl font-light text-primary">
+              <div className="text-xl md:text-2xl font-light text-primary">
                 {skill.percentage}%
               </div>
             </div>
-            <span className="text-gray-400 dark:text-[#999] text-[10px] lg:text-[11px] font-medium uppercase tracking-wider">{skill.name}</span>
+            <span className="text-gray-400 dark:text-[#999] text-[9px] lg:text-[10px] font-medium uppercase tracking-wider">{skill.name}</span>
           </div>
         ))}
       </div>

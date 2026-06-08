@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
       <h1 
         data-gsap-animate="fade-up" 
         data-gsap-delay="0.2"
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.1] mb-6 lg:mb-8 tracking-tight text-[#1a1a1a] dark:text-white"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-[1.15] mb-5 lg:mb-7 tracking-tight text-[#1a1a1a] dark:text-white"
       >
         Meet <span className="text-primary">{PERSONAL_INFO.name}</span>, <br />
         Digital Marketing Strategist
@@ -41,7 +41,7 @@ const HeroSection: React.FC = () => {
       <p 
         data-gsap-animate="fade-up" 
         data-gsap-delay="0.4"
-        className="text-gray-500 dark:text-[#999] text-sm md:text-base max-w-md leading-relaxed mb-8 lg:mb-14"
+        className="text-gray-500 dark:text-[#999] text-xs md:text-sm max-w-md leading-relaxed mb-8 lg:mb-10"
       >
         {PERSONAL_INFO.summary}
       </p>
@@ -49,11 +49,11 @@ const HeroSection: React.FC = () => {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-10 sm:gap-0 mt-2">
         <div data-gsap-stagger className="flex gap-10 lg:gap-14">
           <div data-gsap-animate="scale-in">
-            <div className="text-4xl lg:text-5xl font-normal text-primary mb-1 tracking-tighter">10+</div>
+            <div className="text-3xl lg:text-4xl font-normal text-primary mb-1 tracking-tighter">10+</div>
             <div className="text-gray-400 dark:text-[#666] text-[9px] uppercase tracking-[2px] font-medium">Years in <br/> Brand Strategy</div>
           </div>
           <div data-gsap-animate="scale-in" data-gsap-delay="0.1">
-            <div className="text-4xl lg:text-5xl font-normal text-primary mb-1 tracking-tighter">200K+</div>
+            <div className="text-3xl lg:text-4xl font-normal text-primary mb-1 tracking-tighter">200K+</div>
             <div className="text-gray-400 dark:text-[#666] text-[9px] uppercase tracking-[2px] font-medium">Community <br/> Audited & Built</div>
           </div>
         </div>

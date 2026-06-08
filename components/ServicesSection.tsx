@@ -33,7 +33,7 @@ const ServicesSection: React.FC = () => {
       </div>
 
       {/* Heading */}
-      <h2 data-gsap-animate="fade-up" className="text-3xl md:text-4xl font-normal leading-tight mb-8 lg:mb-12 tracking-tight text-[#1a1a1a] dark:text-white">
+      <h2 data-gsap-animate="fade-up" className="text-2xl md:text-3xl font-normal leading-tight mb-6 lg:mb-10 tracking-tight text-[#1a1a1a] dark:text-white">
         My <span className="text-primary">Specializations</span>
       </h2>
 
@@ -42,14 +42,14 @@ const ServicesSection: React.FC = () => {
         {specializations.map((service, idx) => (
           <div 
             key={idx} 
-            className="group relative bg-white dark:bg-transparent border border-black/10 dark:border-[#333] hover:border-primary rounded-[25px] p-6 lg:p-8 transition-all duration-300 shadow-sm dark:shadow-none"
+            className="group relative bg-white dark:bg-transparent border border-black/10 dark:border-[#333] hover:border-primary rounded-[25px] p-6 lg:p-7 transition-all duration-300 shadow-sm dark:shadow-none"
           >
             <div className="flex justify-between items-start gap-4">
               <div className="space-y-2 lg:space-y-3">
-                <h3 className="text-xl md:text-2xl font-light text-[#1a1a1a] dark:text-white group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-lg md:text-xl font-light text-[#1a1a1a] dark:text-white group-hover:text-primary transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-gray-500 dark:text-[#999] text-xs md:text-sm max-w-sm leading-relaxed">
+                <p className="text-gray-500 dark:text-[#999] text-xs max-w-sm leading-relaxed">
                   {service.description}
                 </p>
                 <div className="pt-2 lg:pt-3">

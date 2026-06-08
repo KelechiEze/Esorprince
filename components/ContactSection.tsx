@@ -13,26 +13,26 @@ const ContactSection: React.FC = () => {
       </div>
 
       {/* Heading */}
-      <h2 data-gsap-animate="fade-up" className="text-3xl md:text-4xl font-normal leading-tight mb-6 lg:mb-10 tracking-tight text-[#1a1a1a] dark:text-white">
+      <h2 data-gsap-animate="fade-up" className="text-2xl md:text-3xl font-normal leading-tight mb-5 lg:mb-8 tracking-tight text-[#1a1a1a] dark:text-white">
         Let's Work <span className="text-primary">Together!</span>
       </h2>
 
-      <h3 data-gsap-animate="fade-up" data-gsap-delay="0.1" className="text-xl lg:text-4xl font-light mb-12 lg:mb-16 hover:text-primary transition-colors text-[#1a1a1a] dark:text-white">
+      <h3 data-gsap-animate="fade-up" data-gsap-delay="0.1" className="text-lg lg:text-3xl font-light mb-10 lg:mb-14 hover:text-primary transition-colors text-[#1a1a1a] dark:text-white">
         <a href={`mailto:${PERSONAL_INFO.email}`} className="underline underline-offset-8 decoration-1 decoration-black/10 dark:decoration-[#333] hover:decoration-primary">{PERSONAL_INFO.email}</a>
       </h3>
 
       <div data-gsap-stagger className="flex flex-col md:flex-row gap-10 md:gap-20">
         <div>
-          <p className="text-[10px] uppercase tracking-[3px] text-gray-400 dark:text-[#666] mb-4">Phone</p>
-          <a href={`tel:${PERSONAL_INFO.phone}`} className="text-xl font-light text-[#1a1a1a] dark:text-white hover:text-primary transition-colors">{PERSONAL_INFO.phone}</a>
+          <p className="text-[9px] uppercase tracking-[3px] text-gray-400 dark:text-[#666] mb-3">Phone</p>
+          <a href={`tel:${PERSONAL_INFO.phone}`} className="text-lg font-light text-[#1a1a1a] dark:text-white hover:text-primary transition-colors">{PERSONAL_INFO.phone}</a>
         </div>
         <div>
-          <p className="text-[10px] uppercase tracking-[3px] text-gray-400 dark:text-[#666] mb-4">Location</p>
-          <p className="text-xl font-light text-[#1a1a1a] dark:text-white">{PERSONAL_INFO.location}</p>
+          <p className="text-[9px] uppercase tracking-[3px] text-gray-400 dark:text-[#666] mb-3">Location</p>
+          <p className="text-lg font-light text-[#1a1a1a] dark:text-white">{PERSONAL_INFO.location}</p>
         </div>
         <div>
-          <p className="text-[10px] uppercase tracking-[3px] text-gray-400 dark:text-[#666] mb-4">Social</p>
-          <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-xl font-light text-[#1a1a1a] dark:text-white hover:text-primary transition-colors">LinkedIn</a>
+          <p className="text-[9px] uppercase tracking-[3px] text-gray-400 dark:text-[#666] mb-3">Social</p>
+          <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-lg font-light text-[#1a1a1a] dark:text-white hover:text-primary transition-colors">LinkedIn</a>
         </div>
       </div>
     </section>

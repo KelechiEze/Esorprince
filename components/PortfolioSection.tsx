@@ -51,7 +51,7 @@ const PortfolioSection: React.FC = () => {
       </div>
 
       {/* Heading */}
-      <h2 data-gsap-animate="fade-up" className="text-3xl md:text-4xl font-normal leading-tight mb-8 lg:mb-14 tracking-tight text-[#1a1a1a] dark:text-white">
+      <h2 data-gsap-animate="fade-up" className="text-2xl md:text-3xl font-normal leading-tight mb-6 lg:mb-10 tracking-tight text-[#1a1a1a] dark:text-white">
         Featured <span className="text-primary">Projects</span>
       </h2>
 
@@ -75,7 +75,7 @@ const PortfolioSection: React.FC = () => {
                 {project.tags.map((tag, i) => (
                   <span 
                     key={i} 
-                    className="bg-white text-black px-3 lg:px-3.5 py-1 lg:py-1.5 rounded-full text-[9px] lg:text-[10px] font-bold tracking-tight shadow-lg"
+                    className="bg-white text-black px-3 lg:px-3.5 py-1 lg:py-1.5 rounded-full text-[8px] lg:text-[9px] font-bold tracking-tight shadow-lg"
                   >
                     {tag}
                   </span>
@@ -84,7 +84,7 @@ const PortfolioSection: React.FC = () => {
             </div>
             
             {/* Project Title */}
-            <h3 className="text-lg lg:text-2xl font-light text-[#1a1a1a] dark:text-white group-hover:text-primary transition-colors duration-300">
+            <h3 className="text-base lg:text-xl font-light text-[#1a1a1a] dark:text-white group-hover:text-primary transition-colors duration-300">
               {project.title}
             </h3>
           </div>

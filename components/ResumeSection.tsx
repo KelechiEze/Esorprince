@@ -38,7 +38,7 @@ const ResumeSection: React.FC = () => {
         <span className="text-[9px] uppercase tracking-[2px] font-medium text-[#1a1a1a] dark:text-white">Resume</span>
       </div>
 
-      <h2 data-gsap-animate="fade-up" className="text-3xl md:text-4xl font-normal leading-tight mb-8 lg:mb-14 tracking-tight text-[#1a1a1a] dark:text-white">
+      <h2 data-gsap-animate="fade-up" className="text-2xl md:text-3xl font-normal leading-tight mb-6 lg:mb-10 tracking-tight text-[#1a1a1a] dark:text-white">
         Education & <span className="text-primary">Experience</span>
       </h2>
 
@@ -47,17 +47,17 @@ const ResumeSection: React.FC = () => {
           <div key={idx} className="relative group">
             <div className="absolute -left-[37px] md:-left-[51px] top-1 w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-[#666] group-hover:bg-primary transition-colors duration-300"></div>
             
-            <div className="text-gray-500 dark:text-[#999] text-sm mb-3 lg:mb-5 group-hover:text-primary transition-colors duration-300">
+            <div className="text-gray-500 dark:text-[#999] text-xs mb-2.5 lg:mb-4 group-hover:text-primary transition-colors duration-300">
               {group.period}
             </div>
 
             <div className="space-y-6 lg:space-y-8">
               {group.items.map((item, itemIdx) => (
                 <div key={itemIdx} className="space-y-1.5">
-                  <h3 className="text-xl md:text-2xl font-light text-[#1a1a1a] dark:text-white hover:text-primary transition-colors duration-300 cursor-default">
+                  <h3 className="text-lg md:text-xl font-light text-[#1a1a1a] dark:text-white hover:text-primary transition-colors duration-300 cursor-default">
                     {item.title}
                   </h3>
-                  <p className="text-gray-400 dark:text-[#666] text-xs uppercase tracking-wide">
+                  <p className="text-gray-400 dark:text-[#666] text-[10px] md:text-xs uppercase tracking-wide">
                     {item.company}
                   </p>
                 </div>
